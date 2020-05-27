@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="33px" height="35px" viewBox="0 0 33 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>ICON_TRANSPORT</title>
+    <desc>Created with Sketch.</desc>
+    <g id="PAGES---DESKTOP-+-MOBILE" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-283.000000, -3063.000000)" stroke="#D0AA6B" stroke-width="1.52429832">
+            <g id="SECTION_4" transform="translate(279.000000, 2301.000000)">
+                <g id="ICON-SECTION" transform="translate(1.000000, 490.061909)">
+                    <g id="LIST---ICON-+-TEXT">
+                        <g id="ICON_TRANSPORT" transform="translate(4.572895, 272.849399)">
+                            <path d="M24.9059457,30.4859663 L6.34216978,30.4859663 C4.94397993,30.4859663 3.81074579,29.3486704 3.81074579,27.9454691 L3.81074579,2.54049719 C3.81074579,1.13729591 4.94397993,0 6.34216978,0 L24.9059457,0 C26.3041355,0 27.4373697,1.13729591 27.4373697,2.54049719 L27.4373697,27.9454691 C27.4373697,29.3486704 26.3041355,30.4859663 24.9059457,30.4859663 Z" id="Stroke-1" stroke-linejoin="round"></path>
+                            <path d="M26.6752205,30.4859663 L26.6752205,32.0102646 C26.6752205,32.430971 26.2858712,32.7724138 25.8041929,32.7724138 L21.4490549,32.7724138 C20.9673766,32.7724138 20.5780273,32.430971 20.5780273,32.0102646 L20.5780273,30.4859663" id="Stroke-3" stroke-linejoin="round"></path>
+                            <path d="M3.81074579,30.4859663 L3.81074579,32.0102646 C3.81074579,32.430971 4.20096616,32.7724138 4.6817734,32.7724138 L9.03691144,32.7724138 C9.51771868,32.7724138 9.90793905,32.430971 9.90793905,32.0102646 L9.90793905,30.4859663" id="Stroke-5" stroke-linejoin="round"></path>
+                            <path d="M3.81074579,19.4348035 L27.4373697,19.4348035" id="Stroke-7" stroke-linejoin="round"></path>
+                            <path d="M6.09719326,23.2455493 L10.6700882,23.2455493" id="Stroke-9" stroke-linejoin="round"></path>
+                            <path d="M19.8158781,23.2455493 L24.3887731,23.2455493" id="Stroke-11" stroke-linejoin="round"></path>
+                            <path d="M3.81074579,4.95396953 L27.4373697,4.95396953" id="Stroke-13" stroke-linejoin="round"></path>
+                            <polyline id="Stroke-15" stroke-linejoin="round" points="3.04859663 6.09719326 0 8.63769046 0 13.7186848"></polyline>
+                            <polyline id="Stroke-17" stroke-linejoin="round" points="27.4373697 6.09719326 30.4859663 8.63769046 30.4859663 13.7186848"></polyline>
+                            <path d="M15.6240577,4.57289495 L15.6240577,19.0537289" id="Stroke-19"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

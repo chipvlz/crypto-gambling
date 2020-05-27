@@ -1,0 +1,673 @@
+@import "./_variables.scss";
+@import "./_fonts";
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap-vue/src/index";
+@import "./_navbar-toggler";
+@import "./typography";
+@import "./deposit";
+@import "./graph";
+@import "./flex";
+@import "./element-ui.scss";
+@import './admin_variables.scss';
+@import './_sidebar.scss';
+
+body {
+  position: relative;
+  font-family: OpenSans;
+  // background-color: #1e2742;
+}
+
+.app-container {
+  overflow-x: hidden;
+  // background-color: $main-bg-color;
+}
+
+// Navbar Main Css
+.navbar {
+  // background-color: $navbar-bg-color !important;
+  height: 85px;
+  box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+  @include media-breakpoint-up(md) {
+    padding-left: 15px;//6.15vw;
+    padding-right: 15px;//6.15vw;
+  }
+}
+
+// Navbar Mobile css
+.navbar-collapse.collapsing,
+.navbar-collapse.collapse.show {
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  left: 0;
+  transition: none;
+  -webkit-transition: none;
+
+  .navbar-nav-wrapper {
+    position: absolute;
+    bottom: 30px;
+    right: 0px;
+
+    justify-content: flex-end;
+
+    .navbar-nav {
+      border-right: 1px solid $navbar-text-color;
+      padding: 0px 15px 0px 15px;
+    }
+
+    .nav-link {
+      // text-align: right;
+      // font-size: 1rem;
+    }
+    @include media-breakpoint-down(sm) {
+      flex-direction: column-reverse;
+      align-items: baseline;
+      .profile-bar-wrapper {
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .navbar-collapse.show-navbar {
+    background: #fff;
+    z-index: 1000;
+    box-shadow: 0 0 5px #000000;
+  }
+}
+
+.mobile-item {
+  display: none !important;
+  @include media-breakpoint-down(md) {
+    display: block !important;
+  }
+}
+
+.desktop-auth {
+  display: flex !important;
+  @include media-breakpoint-down(md) {
+    display: none !important;
+  }
+}
+
+// Navbar Logo and text
+.navbar-brand {
+  // padding-top: 15px;
+  // padding-bottom: 15px;
+
+  .logo {
+    height: 32px;
+  }
+
+  .text {
+    height: 32px;
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
+  }
+}
+
+// Navbar main css
+.navbar-dark {
+  .navbar-nav {
+    .nav-item {
+      height: 45px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    .nav-link {
+      font-family: OpenSans;
+      color: $navbar-text-color;
+      &:hover {
+        color: $navbar-profile-text-color;
+      }
+    }
+    .link-active {
+      background: #1e2742;
+      border-radius: 20px;
+      // border-bottom: 1px solid white;
+      // color: white;
+      @include media-breakpoint-down(lg) {
+        padding-left: 12px;
+      }
+    }
+  }
+  .vert-seperator {
+    background-color: #485991;
+    width: 1px;
+    height: 45px;
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+}
+// Navbar Desktop css
+.navbar-expand-lg {
+  .navbar-nav {
+    padding-left: 12.5px;
+    padding-right: 12.5px;
+    .nav-link {
+      padding-right: 12.5px;//1rem;
+      padding-left: 12.5px;//1rem;
+    }
+  }
+
+  &.top-nav {
+    .navbar-toggler {
+      background: #1e2742;
+    }
+
+    @include media-breakpoint-down(sm) {
+      .navbar-brand img {
+        max-width: 120px;
+        height: auto;
+      }
+    }
+  }
+}
+
+.navbar-nav-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.profile-bar-wrapper {
+  @include media-breakpoint-down(xs) {
+    display: block;
+  }
+}
+// Navbar Link
+.nav-link {
+  font-family: OpenSans;
+  font-size: $navbar-text-size;
+  font-weight: bold;
+  letter-spacing: 1px;
+
+  display: flex;
+  flex-direction: row;
+	justify-content: flex-start;
+  align-items: center;
+
+  .mr-sm {
+    margin-right: 10px;
+  }
+  @include media-breakpoint-up(md) {
+    font-size: $navbar-text-size;
+  }
+}
+
+.profile-img {
+  width: $navbar-profile-size;
+  height: $navbar-profile-size;
+  border-radius: $navbar-profile-border-radius;
+  background-color: rgba(0, 0, 0, 1);
+}
+.sidebar {
+  transform: rotate(-90deg);
+  position: absolute;
+  z-index: 3;
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 4.5vw 2.5vw;
+    letter-spacing: 0.25vw;
+    display: inline-flex;
+
+    li {
+      font-family: Avenir-Heavy;
+      font-size: 0.7vw;
+      padding: 0.75vw 1vw;
+      max-width: 100vw;
+
+      a {
+        color: $dark;
+      }
+    }
+  }
+
+  top: 15vw;
+  left: -16vw;
+
+  &.left {
+    top: 13vw;
+    ul {
+      padding: 0 5vw;
+    }
+  }
+
+  &.right {
+    left: inherit;
+    right: -15.25vw;
+  }
+
+  &.bottom {
+    top: inherit;
+    bottom: 15vw;
+  }
+}
+
+.footer {
+  @include media-breakpoint-up(md) {
+    padding-left: 6.15vw;
+    padding-right: 4.7vw;
+  }
+
+  .content {
+    font-family: Avenir-Heavy;
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+    }
+
+    .brand {
+      @include media-breakpoint-down(md) {
+        margin: auto;
+        margin-bottom: 1.5rem;
+      }
+
+      padding-top: 15px;
+      padding-bottom: 15px;
+
+      .logo,
+      .text {
+        height: 28px;
+
+        @include media-breakpoint-down(md) {
+          height: 60px;
+          margin: auto;
+        }
+      }
+    }
+
+    a {
+      min-width: 1.25rem;
+      font-size: 0.8rem;
+      text-align: center;
+
+      @include media-breakpoint-up(xl) {
+        letter-spacing: 0.1rem;
+      }
+
+      @include media-breakpoint-down(md) {
+        letter-spacing: 0.2rem;
+        margin-bottom: 10px;
+      }
+    }
+
+    .link-list {
+      @include media-breakpoint-up(lg) {
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+
+      @include media-breakpoint-down(lg) {
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+
+      font-family: OpenSans;
+      font-size: 0.85rem;
+
+      @include media-breakpoint-down(md) {
+        flex-direction: column;
+        margin: auto;
+      }
+
+      .link {
+        a {
+          @include media-breakpoint-down(md) {
+            display: block;
+          }
+        }
+      }
+
+      .social {
+        text-align: center;
+
+        @include media-breakpoint-down(md) {
+          margin-top: 1.75rem;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    font-family: OpenSans;
+    font-size: 0.65rem;
+    color: $secondary;
+    text-align: right;
+
+    &:last-child {
+      padding-bottom: 15px;
+    }
+
+    @include media-breakpoint-down(md) {
+      text-align: center;
+    }
+  }
+}
+
+.contact-us {
+  font-family: Avenir-Black;
+  font-size: 1.08vw;
+  padding: 10px 25px;
+
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.35);
+
+  @include media-breakpoint-down(sm) {
+    font-size: 1rem;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.contact-form {
+  .modal-dialog {
+    width: 80%;
+    max-width: 1140px;
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  .modal-header {
+    padding-top: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 0;
+
+    .close {
+      font-family: OpenSans;
+      font-weight: normal;
+      font-size: 2.5rem;
+      color: $light;
+      opacity: 1;
+
+      &:hover {
+        color: $light;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .modal-body {
+    padding: 1rem 4.5rem 4.5rem;
+
+    @include media-breakpoint-down(sm) {
+      padding: 0 1rem 1rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      font-family: OpenSans;
+      margin-bottom: 2rem;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 2.25rem;
+      }
+    }
+
+    .contacts {
+      margin-bottom: 2.5rem;
+
+      label,
+      a {
+        font-family: OpenSans;
+        font-size: 1.25rem;
+      }
+    }
+
+    .form-group {
+      label {
+        font-family: OpenSans;
+        color: $light;
+      }
+      .form-control {
+        border-color: $yellow;
+        &::placeholder {
+          font-style: italic;
+          color: $yellow;
+        }
+      }
+    }
+  }
+}
+
+.game-detail-form {
+  .modal-content {
+    background-color: transparent;
+  }
+  .modal-header {
+    background: $navbar-bg-color;
+    border-top-left-radius: $card-border-radius;
+    border-top-right-radius: $card-border-radius;
+
+    // padding-top: 1.5rem;
+    // padding-right: 1.5rem;
+    // padding-bottom: 0;
+
+    .close {
+      font-family: OpenSans;
+      font-weight: normal;
+      font-size: 2.5rem;
+      color: $light;
+      opacity: 1;
+
+      &:hover {
+        color: $light;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .modal-body {
+    background: $navbar-bg-color;
+    padding: 1rem 4.5rem 4.5rem;
+    border-bottom-left-radius: $card-border-radius;
+    border-bottom-right-radius: $card-border-radius;
+    @include media-breakpoint-down(sm) {
+      padding: 0 1rem 1rem;
+    }
+  }
+}
+.login-signup-form {
+  .modal-content {
+    background-color: transparent;
+  }
+  .modal-header {
+    background: $navbar-bg-color;
+    border-top-left-radius: $card-border-radius;
+    border-top-right-radius: $card-border-radius;
+
+    // padding-top: 1.5rem;
+    // padding-right: 1.5rem;
+    // padding-bottom: 0;
+
+    .close {
+      font-family: OpenSans;
+      font-weight: normal;
+      font-size: 2.5rem;
+      color: $light;
+      opacity: 1;
+
+      &:hover {
+        color: $light;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .modal-body {
+    background: $navbar-bg-color;
+    padding: 1rem 4.5rem 4.5rem;
+    border-bottom-left-radius: $card-border-radius;
+    border-bottom-right-radius: $card-border-radius;
+
+    @include media-breakpoint-down(sm) {
+      padding: 0 2.5rem 2.5rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      font-family: OpenSans;
+      color: $navbar-text-color;
+      margin-bottom: 2rem;
+      text-align: center;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 2.25rem;
+      }
+    }
+
+    .form-group {
+      label {
+        font-family: OpenSans;
+        color: $navbar-text-color;
+      }
+      .form-control {
+        border-color: $navbar-profile-text-color;
+        color: black;
+        &::placeholder {
+          font-style: italic;
+          // color: $navbar-text-color;
+          color: black;
+        }
+      }
+      input {
+        background: $light;
+      }
+    }
+  }
+}
+
+.vld-overlay.is-full-page {
+  z-index: 10000;
+  position: fixed;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #4b5e9a;
+  outline: 1px solid #4b5e9a;
+  border-radius: 3px;
+}
+
+div::-webkit-scrollbar {
+   width: 8px;
+   @include media-breakpoint-down(sm) {
+      width: 8px;
+   }
+}
+/*
+div::-webkit-scrollbar-track {
+   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+   border-radius: 10px;
+   @include media-breakpoint-down(sm) {
+      border-radius: 5px;
+   }
+}
+*/
+div::-webkit-scrollbar-thumb {
+   border-radius: 5px;
+   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+   @include media-breakpoint-down(sm) {
+      border-radius: 5px;
+   }
+}
+
+.v-lazy-image {
+  filter: blur(10px);
+  transition: filter 0.7s;
+}
+.v-lazy-image-loaded {
+  filter: blur(0);
+}
+
+
+.game-info-detail-table tr td ,
+.game-info-detail-table tr th{
+  font-size: 12px;
+  color: #fff;
+}
+
+.game-info-detail-table tr {
+  cursor: pointer;
+}
+
+.table-danger {
+  background-color: transparent;
+  color: #fd384b !important;
+}
+
+.table-red {
+  color: #fd384b !important;
+}
+
+.table-blue {
+  color: #6de66d !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.redex-header.navbar-nav .nav-item .nav-link {
+  color: $navbar-text-color !important;
+  line-height: 2;
+}
+
+.mobile-balance {
+  display: none;
+  text-align: right;
+  flex: 1;
+  
+  @include media-breakpoint-down(md) {
+    display: block;
+    flex-direction: column;
+    padding-right: 15px;
+  }
+  @media screen and (max-width: 340px) {
+    padding-right: 5px;
+  }
+
+  .balance-content {
+    display: inline-flex !important;
+    flex-direction: column;
+    text-align: center;
+    font-size: 12px;
+    
+    .price {
+      color: #fdd233;
+      font-weight: bold;
+    }
+  }
+}

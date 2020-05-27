@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'SF Slapstick Comic Shaded';
+    font-weight: 100;
+    font-style: normal;
+    src: url('./fonts/SF Slapstick Comic Shaded.ttf');
+}
+@font-face {
+    font-family: 'SF Slapstick Comic Oblique';
+    font-weight: 100;
+    font-style: normal;
+    src: url('./fonts/SF Slapstick Comic Oblique.ttf');
+}

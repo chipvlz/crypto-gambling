@@ -1,0 +1,2 @@
+ckeditor
+vue-editor

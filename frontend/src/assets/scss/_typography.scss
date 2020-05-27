@@ -1,0 +1,48 @@
+.page-content-value .label , .ck-blurred , .ck-focused {
+  p {
+    margin-bottom: 0.1rem !important;
+  }
+}
+
+h1 {
+  font-family: OpenSans;
+  font-size: 2.5rem;
+  line-height: 1.1;
+
+  @include media-breakpoint-up(md) {
+    font-size: 5vw;
+  }
+}
+
+h2 {
+  font-family: OpenSans;
+  font-size: 2rem;
+  letter-spacing: 0.35rem;
+
+  @include media-breakpoint-up(md) {
+    font-size: 3vw;
+    letter-spacing: 0.5rem;
+  }
+}
+
+h3 {
+  font-family: OpenSans;
+  font-size: 1.25rem;
+  line-height: 1.35;
+
+  @include media-breakpoint-up(md) {
+    font-size: 1.25vw;
+  }
+}
+
+p {
+  font-family: OpenSans;
+
+  @include media-breakpoint-up(md) {
+    font-size: .875rem;
+  }
+}
+
+.underline {
+  text-decoration: underline;
+}

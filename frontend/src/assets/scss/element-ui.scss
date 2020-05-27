@@ -1,0 +1,128 @@
+// cover some element-ui styles
+
+.el-breadcrumb__inner,
+.el-breadcrumb__inner a {
+  font-weight: 400 !important;
+  color: black;
+}
+
+.el-upload {
+  input[type="file"] {
+    display: none !important;
+  }
+}
+
+.el-upload__input {
+  display: none;
+}
+
+.cell {
+  .el-tag {
+    margin-right: 0px;
+  }
+}
+
+.small-padding {
+  .cell {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+.fixed-width {
+  .el-button--mini {
+    padding: 7px 10px;
+    width: 60px;
+  }
+}
+
+.status-col {
+  .cell {
+    padding: 0 10px;
+    text-align: center;
+
+    .el-tag {
+      margin-right: 0px;
+    }
+  }
+}
+
+// to fixed https://github.com/ElemeFE/element/issues/2461
+.el-dialog {
+  transform: none;
+  left: 0;
+  position: relative;
+  margin: 0 auto;
+  @media only screen and (max-width: 560px) {
+    width: 90%;
+  }
+}
+
+// refine element ui upload
+.upload-container {
+  .el-upload {
+    width: 100%;
+
+    .el-upload-dragger {
+      width: 100%;
+      height: 200px;
+    }
+  }
+}
+
+// dropdown
+.el-dropdown-menu {
+  a {
+    display: block
+  }
+}
+// .el-table {
+//   background-color: #373d3e;
+//   border-radius: 4px;
+//   border-color: #606266;
+//   .el-table__body tr.hover-row>td {
+//     background-color: #5e9fa1;
+//   }
+//   .el-table__body tr.current-row>td {
+//     background-color: #5e9fa1;
+//   }
+//   .el-table__header-wrapper {
+//     background-color: #646e70;
+//     border-color: #606266;
+//     th {
+//       background-color: #646e70;
+//       color: white;
+//       border-color: #606266;
+//     }
+//   }
+//   .el-table__body-wrapper {
+//     background-color: #646e70;
+//     border-color: #606266;
+//     td {
+//       background-color: #646e70;
+//       color: white;
+//       border-color: #606266;
+//     }
+//   }
+//   &:before {
+//     height: 0px;
+//   }
+//   &:after {
+//     height: 0px;
+//   }
+// }
+
+// fix date-picker ui bug in filter-item
+.el-range-editor.el-input__inner {
+  display: inline-flex !important;
+}
+
+// .el-card {
+//   background-color: #4b4f50;
+//   box-shadow: 0px 0px 30px #393c3d,0px 0px 30px #393c3d;
+//   color: white;
+//   border: none;
+//   .el-card__header {
+//       border-bottom: 1px solid #606266;
+//   }
+// }

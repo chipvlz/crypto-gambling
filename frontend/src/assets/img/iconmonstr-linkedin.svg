@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="18px" viewBox="0 0 19 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>iconmonstr-linkedin-1</title>
+    <desc>Created with Sketch.</desc>
+    <g id="GLOBAL-COMPONENTS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="MOBILE---FOOTER" transform="translate(-87.000000, -358.000000)" fill="#D0AA6B" fill-rule="nonzero">
+            <g transform="translate(0.000000, 2.000000)" id="SOCIAL-ICONS">
+                <g transform="translate(87.000000, 355.000000)">
+                    <g id="iconmonstr-linkedin-1" transform="translate(0.000000, 1.000000)">
+                        <path d="M3.9425,1.95652174 C3.9425,3.03730435 3.06375,3.91304348 1.97916667,3.91304348 C0.894583333,3.91304348 0.0158333333,3.03730435 0.0158333333,1.95652174 C0.0158333333,0.876521739 0.894583333,0 1.97916667,0 C3.06375,0 3.9425,0.876521739 3.9425,1.95652174 Z M3.95833333,5.47826087 L0,5.47826087 L0,18 L3.95833333,18 L3.95833333,5.47826087 Z M10.2774167,5.47826087 L6.34441667,5.47826087 L6.34441667,18 L10.2782083,18 L10.2782083,11.4268696 C10.2782083,7.77208696 15.0511667,7.47313043 15.0511667,11.4268696 L15.0511667,18 L19,18 L19,10.0713913 C19,3.90443478 11.93675,4.12904348 10.2774167,7.16478261 L10.2774167,5.47826087 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

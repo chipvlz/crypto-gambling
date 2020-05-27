@@ -1,0 +1,17 @@
+
+.graph {
+  width: 100%;
+  position: relative;
+  .bg {
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      width: calc(100% - 29px);
+      height: calc(100% - 37px);
+      margin-left: 27px;
+      background: url(../img/bg_graph.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+}
